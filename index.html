@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список постов</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f2f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .posts-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .post-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .post-card h3 {
+            color: #182b49;
+        }
+
+        .post-card p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        #status {
+            font-weight: bold;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Все посты</h1>
+
+    <p id="status">Загрузка...</p>
+
+    <div id="postsContainer" class="posts-list"></div>
+
+    <script src="./main.js"></script>
+
+</body>
+</html>
